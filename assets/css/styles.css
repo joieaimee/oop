@@ -1,0 +1,36 @@
+/**
+* @name styles.css
+* @author Aélion - Déc.2019
+* @version 1.0.0
+**/
+
+body { /** selector **/
+    background-color: rgb(123, 131, 108);
+}
+
+header {
+    color: darkslategray;
+}
+thead {
+    color: darkblue;
+    background-color: darkgrey;
+}
+
+tfoot{
+    background-color: rgb(108, 119, 119);
+}
+tbody{
+    background-color: rgb(126, 94, 13);
+}
+#receipe-results table.table thead th {
+    border-bottom: none;
+}
+#receipe-results table.table tfoot td[colspan="3"] {
+    text-align: right;
+}
+#receipe-results table.table tfoot td.total-receipe {
+    font-weight: bold;
+}
+#receipe-results table.table tfoot td.total-piece {
+    font-weight: bold;
+}
