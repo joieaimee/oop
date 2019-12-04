@@ -1,25 +1,45 @@
-import { ProductModel } from "./product-model";
+
+import { QuantityProduct } from "./quantity-product";
 
 export class Recette {
-    private ingredients: Array <ProductModel> = new Array <ProductModel> ();
+    private ingredients: Array <QuantityProduct> = new Array <QuantityProduct> ();
 
-    private title: string;
+    private price: number = 0;
 
-    public constructor(title: string) {
-        this.title = title;
+    private quantityProduced : number = 1;
+
+    public setQuantityProduced(quantity :number) : void {
+        this.quantityProduced = quantity;
+    }
+    public getQuantityProduced() : number{
+        return this.quantityProduced
     }
 
-    public addProduct(product: ProductModel): void {
+
+    
+
+    public addProduct(product: QuantityProduct): void {
+        product.setUnitPrice();
         this.ingredients.push(product);
+        this.price += product.getUnitPrice();
+    
     }
-    public toString(): string {
-        let theRecette: string = ' La recette des ' + this.title + '\n';
+
+    public getPriceRecette(): number {
+        return this.price
+    }
+
+    public toString() : string {
+        let theRecette: string = '';
 
         //loop over ingredients array
-        this.ingredients.forEach((value: ProductModel) => {
+        this.ingredients.forEach((value: QuantityProduct) => {
             theRecette += value.toString() + '\n';
             //ASA theRecette = theRecette + value.toString()
         });
         return theRecette;
     }
+
+
+    
 }

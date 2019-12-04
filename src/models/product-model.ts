@@ -7,11 +7,11 @@ import { threadId } from "worker_threads";
  * @package models
  *
  */
-export class ProductModel {
+export abstract class ProductModel {
     /**
      * Name of the product ( i.e : Lait, Farine, oeuf, ...)
      */
-    private name: string;
+    protected name: string;
 
     /**
      * @var string
@@ -19,7 +19,8 @@ export class ProductModel {
      * Base unit for the quantities of product (i.e : l, kg, unity, ...)
      */
 
-    private baseUnit: string;
+    protected baseUnit: string;
+
    
     public setName(name: string) : void {
         if (this.name == null) {
@@ -39,7 +40,7 @@ export class ProductModel {
         return this.baseUnit;
     }
 
-    private price: number;
+    protected price: number;
 
     public setPrice(price: number) : void {
         this.price = price;
@@ -49,17 +50,17 @@ export class ProductModel {
         return this.price;
     }
 
-    private targetQuantity: number;
+    protected targetQuantity: number;
 
-    public setTargetQuantity(targetQuantity: number) : void {
-        this.targetQuantity;
+    public setTargetQuantity(targetQuantity: number){
+        this.targetQuantity = targetQuantity;
     }
 
     public getTargetQuantity(): number{
         return this.targetQuantity
     }
 
-    private strategy : number
+    protected strategy : number
     public setStrategy(strategy : number) : void{
         if (strategy > 0 && strategy <=3) {
             this.strategy = strategy;
@@ -83,4 +84,4 @@ export class ProductModel {
        
     }
 
-}
+} 
