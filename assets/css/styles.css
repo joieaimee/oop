@@ -5,22 +5,22 @@
 **/
 
 body { /** selector **/
-    background-color: rgb(123, 131, 108);
+    background-color: rgba(99, 105, 16, 0.527);
 }
 
 header {
-    color: darkslategray;
+    color: rgb(15, 13, 109);
 }
 thead {
     color: darkblue;
-    background-color: darkgrey;
+    background-color: rgb(134, 131, 131);
 }
 
 tfoot{
-    background-color: rgb(108, 119, 119);
+    background-color: rgb(134, 131, 131);
 }
 tbody{
-    background-color: rgb(126, 94, 13);
+    background-color: rgb(187, 183, 178);
 }
 #receipe-results table.table thead th {
     border-bottom: none;
@@ -34,3 +34,19 @@ tbody{
 #receipe-results table.table tfoot td.total-piece {
     font-weight: bold;
 }
+
+form fieldset {
+    padding-bottom: 1em;
+}
+
+form.hidden-form {
+    display: none;
+}
+
+#ingredient-form .input-group
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button { 
+	-webkit-appearance: none;
+	margin:0;
+}
+
