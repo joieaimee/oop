@@ -14,9 +14,6 @@ export class ReceipeFormModule {
        if ($('#ingredient-form').hasClass('hidden-form')) {
            //Have to remove the hidden-form class
            $('#ingredient-form').removeClass('hidden-form');
-       } else {
-            // Have to add the hidden-form class
-            $('#ingredient-form').addClass('hidden-form');
-       }
+       } 
     }
 }
