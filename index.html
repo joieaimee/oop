@@ -1,14 +1,18 @@
 <!doctype html>
 <html><!-- Balise racine du document HTML -->
      <head>
-         <meta charset="utf-8">
+            <meta charset="utf-8">
 
-         <title>Mes Recettes de cuisine</title>
+            <title>Mes Recettes de cuisine</title>
 
-         <!--Stylesheets-->
-         <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
-         <link rel="stylesheet" href="./assets/css/styles.css">
-         <link rel="stylesheet" href="./assets/css/style.css">
+            <!--Stylesheets-->
+            <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+            <link rel="stylesheet" href="./assets/css/styles.css">
+            <link rel="stylesheet" href="./assets/css/style.css">
+
+            <!-- Add js sources-->
+            <script src="./dist/js/app.chunk.js"></script>
+            <script src="./dist/js/app.js"></script>
     </head>
 
      <body>
@@ -20,7 +24,7 @@
             <main class="row">
                 <section id="receipe-forms" class="col-lg-4 col-12">
                     <!-- First : receipe creation form -->
-                    <form>
+                    <form id="receipe-form">
                         <fieldset>
                             <div class="form-group">
                                 <input
@@ -45,7 +49,7 @@
                             </div>
 
                                 <div class="button-group float-right">
-                                    <button type="button" name="create-receipe" id="create-receipe" disabled
+                                    <button type="button" name="create-receipe" id="create-receipe"
                                     class="btn btn-outline-success">
 
                                         créer
