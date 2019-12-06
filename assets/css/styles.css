@@ -5,7 +5,7 @@
 **/
 
 body { /** selector **/
-    background-color: rgba(99, 105, 16, 0.527);
+    background-color: rgb(173, 169, 169)
 }
 
 header {
@@ -41,6 +41,10 @@ form fieldset {
 
 form.hidden-form {
     display: none;
+}
+
+form fieldset legend span {
+    color: rgb(15, 13, 109);
 }
 
 #ingredient-form .input-group

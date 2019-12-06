@@ -51,7 +51,7 @@
                             </div>
 
                                 <div class="button-group float-right">
-                                    <button type="button" name="create-receipe" id="create-receipe"
+                                    <button type="button" name="create-receipe" id="create-receipe" disabled
                                     class="btn btn-outline-success">
 
                                         créer
@@ -60,8 +60,11 @@
                         </fieldset>
                     </form>
                      <!-- Ingredient form-->
-                     <form id="ingredient-form" class="hidden-form animated heartBeat">
+                     <form id="ingredient-form" class="hidden-form animated slideInDown">
                         <fieldset>
+                            <legend class="hidden-form">
+                                Please enter ingredients for <span></span>
+                            </legend>
                                 <div class="form-group">
                                     <input
                                             type="text"
@@ -92,7 +95,7 @@
                                 <div class="form-group"></div>
 
                                     <div class="input-group mb-3">
-                                        <input type="number" class="form-control" name=" prix quantité" placeholder="Prix" aria-label="prix" aria-describedby="basic-addon2">
+                                        <input type="number" class="form-control" id="ingredient-price" name="ingredient-price" placeholder="Prix" aria-label="prix" aria-describedby="basic-addon2">
                                         <div class="input-group-append">
                                           <span class="input-group-text" id="basic-addon2">€</span>
 
@@ -119,18 +122,18 @@
                                                 class="form-control"
                                             >
                                             <div class="button-group float-right">
-                                                    <button type="button" name="create-receipe" id="create-receipe" disabled
+                                                    <button type="button" name="add-and-next" id="add-and-next" disabled
                                                     class="btn btn-outline-success">
                 
-                                                        Ajouter et Terminer
+                                                    add-and-next
                                                     </button>
                                             </div>
 
                                             <div class="button-group float-left">
-                                                    <button type="button" name="create-receipe" id="create-receipe" disabled
+                                                    <button type="button" name="add-and-close" id="add-and-close" disabled
                                                     class="btn btn-outline-success">
                 
-                                                        Ajouter et Continuer
+                                                    add-and-close
                                                     </button>
                                             </div>
                                      </div>    

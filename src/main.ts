@@ -1,5 +1,6 @@
 import * as $ from 'jquery';
 import { ReceipeFormModule } from './modules/receipe-form-module';
+import { IngredientFormModule } from './modules/ingredients-form-modules';
 /**
  * @name Main
  * @author Aélion - Déc.2019 - amaiys@hotmail.com
@@ -9,6 +10,7 @@ import { ReceipeFormModule } from './modules/receipe-form-module';
 export class Main {
     public constructor() {
         new ReceipeFormModule();
+        new IngredientFormModule();
     }
 }
 
