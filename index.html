@@ -115,8 +115,8 @@
                                         </label>
                                             <input
                                                 type="number"
-                                                name="quantity"
-                                                id="quantity"
+                                                name="unit-quantity"
+                                                id="unit-quantity"
                                                 min="1"
                                                 placeholder="Quantity..."
                                                 class="form-control"
@@ -158,60 +158,6 @@
                         </thead>
 
                         <tbody> <!-- Rows of the table-->
-                            <tr>
-                                <td class="form-check"> <!-- Table divider-->
-                                    <input type="checkbox" name="select-farine" id="select-farine">
-                                </td>
-                                <td>Farine</td>
-                                <td>300g</td>
-                                <td>0,54&euro;</td>
-                            </tr>
-
-                            <tr>
-                                    <td class="form-check"> <!-- Table divider-->
-                                        <input type="checkbox" name="select-farine" id="select-farine">
-                                    </td>
-                                    <td>Lait</td>
-                                    <td>60 cl</td>
-                                    <td>0,564&euro;</td>
-                            </tr>
-
-                            <tr>
-                                    <td class="form-check"> <!-- Table divider-->
-                                        <input type="checkbox" name="select-farine" id="select-farine">
-                                    </td>
-                                    <td>Oeuf</td>
-                                    <td>3</td>
-                                    <td>0,66&euro;</td>
-                            </tr>
-
-                            <tr>
-                                    <td class="form-check"> <!-- Table divider-->
-                                        <input type="checkbox" name="select-sucre" id="select-sucre">
-                                    </td>
-                                    <td>Sucre</td>
-                                    <td>60g</td>
-                                    <td>0,0414&euro;</td>
-                            </tr>
-
-                            <tr>
-                                    <td class="form-check"> <!-- Table divider-->
-                                        <input type="checkbox" name="select-beurre" id="select-beurre">
-                                    </td>
-                                    <td>Beurre</td>
-                                    <td>50g</td>
-                                    <td>0,98&euro;</td>
-                            </tr>
-
-                            <tr>
-                                    <td class="form-check"> <!-- Table divider-->
-                                        <input type="checkbox" name="select-rhum" id="select-rhum">
-                                    </td>
-                                    <td>Rhum</td>
-                                    <td>5cl</td>
-                                    <td>0,0696&euro;</td>
-                                </tr>
-
                         </tbody>
                         
                         <tfoot> <!--Footer of the table-->
@@ -220,8 +166,8 @@
                                     Receipe total :   
                                 </td>
 
-                                <td class= "total-receipe">
-                                     3.44€
+                                <td id="total-receipe" class= "total-receipe"> 
+                                    0€
                                 </td>
                             </tr>
 
@@ -230,8 +176,8 @@
                                         Cost for a piece of receipe :   
                                     </td>
     
-                                     <td class="total-piece">
-                                         1€
+                                     <td id="total-piece"  class="total-piece">
+                                         0€
                                     </td>
 
                             </tr>
