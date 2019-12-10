@@ -32,6 +32,8 @@ export class ModalModule {
     private noButton(event: any): void {
         // clear tr in the table
         $('#receipe-results table tbody tr').remove();
+        $('.total-receipe').html('0€');
+        $('.total-piece').html('0€');
         this.hide();
     }
     private yesButton(event: any): void {
@@ -50,6 +52,8 @@ export class ModalModule {
         }
         // clear tr in the table
         $('#receipe-results table tbody tr').remove();
+        $('.total-receipe').html('0€')
+        $('.total-piece').html('0€');
         this.hide();
     }
 }
