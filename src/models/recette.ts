@@ -8,6 +8,7 @@ export class Recette {
 
     private quantityProduced : number = 1;
     private title: string;
+    private unitPrice: number;
 
     public setQuantityProduced(quantity :number) : void {
         this.quantityProduced = quantity;
@@ -22,13 +23,15 @@ export class Recette {
         return this.title;
     }
 
-    
+    public getUnitPrice() : number {
+        return this.unitPrice
+    }
 
     public addProduct(product: QuantityProduct): void {
         product.setUnitPrice();
         this.ingredients.push(product);
         this.price += product.getUnitPrice();
-    
+        this.unitPrice = this.price/ this.quantityProduced;
     }
 
     public getPriceRecette(): number {

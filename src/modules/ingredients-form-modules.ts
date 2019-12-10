@@ -132,6 +132,11 @@ export class IngredientFormModule {
 
         // Add row to tbody
         $('aside#receipe-results table tbody').append(tableRow);
+
+        // Update totals
+        $('aside#receipe-results table tbody').append(tableRow);
+        $('#total-receipe').html(this.receipe.getRecette().getPriceRecette().toString());
+        $('#total-piece').html(this.receipe.getRecette().getUnitPrice().toString());
     }
 
     private createObject(): QuantityProduct {
@@ -146,7 +151,7 @@ export class IngredientFormModule {
 
         // DI using: from ReceipeFormModule, gets Recette object and push ingredient
         this.receipe.getRecette().addProduct(ingredient);
-        
+
         //Compute the unit price
 
         ingredient.setUnitPrice();

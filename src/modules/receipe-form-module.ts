@@ -41,7 +41,8 @@ export class ReceipeFormModule {
            //Have to remove the hidden-form class
            $('#ingredient-form').removeClass('hidden-form');
 
-    
+          this.recette = new Recette($('#receipe-title').val().toString());
+          this.recette.setQuantityProduced(parseInt($('#receipe-quantity').val().toString()));
 
            // "Disable" the form components : fields and button
            $('#create-receipe').attr('disabled', 'disabled');

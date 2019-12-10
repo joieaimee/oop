@@ -54,3 +54,31 @@ input::-webkit-outer-spin-button {
 	margin:0;
 }
 
+    /**
+    *Modal box
+    **/
+
+div.outer-modal {
+    position: absolute;
+    top: 0; /** top at the top of browser window **/
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(128, 128, 128, .6);
+}
+
+div.outer-modal div.inner-modal {
+    position: relative;
+    top: 50%;
+    width: 500px;
+    height: 200px;
+    margin: 0 auto;
+    background-color: rgb(255, 255, 255);
+    transform: translateY(-50%);
+
+}
+
+div.outer-modal.hidden {
+    display: none;
+}
+
