@@ -2,6 +2,7 @@ import * as $ from 'jquery';
 import { QuantityProduct } from './../models/quantity-product';
 import { Recette } from './../models/recette';
 import { ReceipeFormModule } from './receipe-form-module';
+import { ModalModule } from './Modal-modules';
 
 export class IngredientFormModule {
     private form: JQuery = $('#ingredient-form');
@@ -12,7 +13,7 @@ export class IngredientFormModule {
     private receipe: ReceipeFormModule;
 
     public constructor(receipe: ReceipeFormModule) {
-        this.form = $ ('#ingredient-form');
+        this.form = $('#ingredient-form');
         this.receipe = receipe;
 
         this.getFormFields();
@@ -20,6 +21,13 @@ export class IngredientFormModule {
         // Sets the event handlers
         this.setEventHandlers();
     
+    }
+
+    public getReceipe(): Recette {
+        return this.receipe.getRecette();
+    }
+    public getReceipeTitle (): string {
+        return this.receipe.getRecette().getTitle();
     }
     private setEventHandlers () {
         this.form.on(
@@ -72,8 +80,8 @@ export class IngredientFormModule {
         this.addRow(event);
 
         //Call the ModalModule to open up the modal
-        $('.outer-modal .content strong').html(this.receipe.getRecette().getTitle());
-        $('.outer-modal').removeClass('hidden');
+      const modalModule: ModalModule = (new ModalModule(this));
+      modalModule.show();
 
         for(let field of this.fields) {
             if (field.is ('input')) {
