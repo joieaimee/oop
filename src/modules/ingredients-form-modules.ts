@@ -1,16 +1,20 @@
 import * as $ from 'jquery';
 import { QuantityProduct } from './../models/quantity-product';
+import { Recette } from './../models/recette';
+import { ReceipeFormModule } from './receipe-form-module';
 
 export class IngredientFormModule {
     private form: JQuery = $('#ingredient-form');
-
     private fields: Array<JQuery> = new Array();
-
     private createaddAndContinue: JQuery = $('#add-and-next');
     private createaddAndStop: JQuery = $('#add-and-close');
     private checkAll: JQuery =$('#select-all');
+    private receipe: ReceipeFormModule;
 
-    public constructor() {
+    public constructor(receipe: ReceipeFormModule) {
+        this.form = $ ('#ingredient-form');
+        this.receipe = receipe;
+
         this.getFormFields();
         // Populate from field
         // Sets the event handlers
@@ -140,6 +144,9 @@ export class IngredientFormModule {
         ingredient.setUnit($('#target-unit').children('option:selected').val().toString());
         ingredient.setTargetQuantity(parseInt($('#unit-quantity').val().toString()));
 
+        // DI using: from ReceipeFormModule, gets Recette object and push ingredient
+        this.receipe.getRecette().addProduct(ingredient);
+        
         //Compute the unit price
 
         ingredient.setUnitPrice();

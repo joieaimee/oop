@@ -9,8 +9,8 @@ import { IngredientFormModule } from './modules/ingredients-form-modules';
  */
 export class Main {
     public constructor() {
-        new ReceipeFormModule();
-        new IngredientFormModule();
+        const receipe: ReceipeFormModule = new ReceipeFormModule();
+        new IngredientFormModule(receipe);
     }
 }
 

@@ -7,6 +7,7 @@ export class Recette {
     private price: number = 0;
 
     private quantityProduced : number = 1;
+    private title: string;
 
     public setQuantityProduced(quantity :number) : void {
         this.quantityProduced = quantity;
@@ -14,7 +15,12 @@ export class Recette {
     public getQuantityProduced() : number{
         return this.quantityProduced
     }
-
+    public constructor (title: string) {
+        this.title = title;
+    }
+    public getTitle(): string {
+        return this.title;
+    }
 
     
 

@@ -1,9 +1,15 @@
 import * as $ from 'jquery';
+import { Recette } from './../models/recette';
 export class ReceipeFormModule {
+    private recette: Recette;
+
     public constructor() {
         this.setcreateButtonHandler();
         this.setFormKeyUpHandler();
         
+    }
+    public getRecette(): Recette{
+        return this.recette;
     }
 
     private setcreateButtonHandler(): void {
@@ -27,12 +33,15 @@ export class ReceipeFormModule {
        }
     }
 
+
     private toggleIngredientForm(event: any): void {
        if ($('#ingredient-form').hasClass('hidden-form')) {
            // Set the span for the user
            $('#ingredient-form fieldset legend span').html($('#receipe-title').val().toString());
            //Have to remove the hidden-form class
            $('#ingredient-form').removeClass('hidden-form');
+
+    
 
            // "Disable" the form components : fields and button
            $('#create-receipe').attr('disabled', 'disabled');
