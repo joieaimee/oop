@@ -71,6 +71,10 @@ export class IngredientFormModule {
     private addAndStop(event: any): void {
         this.addRow(event);
 
+        //Call the ModalModule to open up the modal
+        $('.outer-modal .content strong').html(this.receipe.getRecette().getTitle());
+        $('.outer-modal').removeClass('hidden');
+
         for(let field of this.fields) {
             if (field.is ('input')) {
                 field.val('');
